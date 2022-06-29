@@ -2,7 +2,6 @@
 # k-Nearest Neighbor 최근접 이웃
 # 지도학습(Supervised Learning): training data + label
 # 데이터 분류(Classification): data -> class label(x: attribute set, y: target attribute)
-# practice: basketball data
 
 import pandas as pd
 
