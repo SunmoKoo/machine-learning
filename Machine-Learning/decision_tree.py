@@ -172,3 +172,11 @@ dot_data = tree.export_graphviz(clf, out_file=None,
                          special_characters=True)  
 graph = graphviz.Source(dot_data)  
 graph
+
+# 모델 테스트
+from sklearn.metrics import accuracy_score
+pred = clf.predict(X_test)
+print("accuracy : " + str(accuracy_score(y_test.values.ravel(), le.classes_[pred])))
+
+comparison = pd.DataFrame({'prediction':le.classes_[pred], 'ground_truth':y_test.values.ravel()})
+comparison
